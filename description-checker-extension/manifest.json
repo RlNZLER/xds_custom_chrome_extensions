@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Description Checker",
+  "version": "1.0",
+  "description": "Checks boxes based on description",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

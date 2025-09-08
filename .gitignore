@@ -1,0 +1,21 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+dist/
+build/
+
+# Editors/OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Zips/build artifacts
+*.zip
+
+# Env / secrets
+*.env
+.env.*
+config.local.json

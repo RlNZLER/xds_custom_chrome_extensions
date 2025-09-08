@@ -1,0 +1,877 @@
+[
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n841861000000\t- - Heat pumps other than air conditioning machines of heading 84.15",
+    "hsCode": "841861000000",
+    "level": "PCOC",
+    "reason": "COC or IECEE required",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n841410000000\t- Vacuum pumps",
+    "hsCode": "841410000000",
+    "level": "PCOC",
+    "reason": "COC or IECEE required",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n841391000000\t-- Of pumps",
+    "hsCode": "841391000000",
+    "level": "PCOC",
+    "reason": "COC or IECEE required",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n841381900000\t- - - Other",
+    "hsCode": "841381900000",
+    "level": "PCOC",
+    "reason": "COC or IECEE required",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n851671000000\t-- Coffee or tea makers",
+    "hsCode": "851671000000",
+    "level": "PCOC",
+    "reason": "COC or IECEE required",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n851679900002\tPotato fries and other pans",
+    "hsCode": "851679900002",
+    "level": "PCOC",
+    "reason": "COC or IECEE required",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n851660000003\tBoilers",
+    "hsCode": "851660000003",
+    "level": "PCOC",
+    "reason": "COC or IECEE required",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n841381100000\t- - - For agricultural use",
+    "hsCode": "841381100000",
+    "level": "PCOC",
+    "reason": "IECEE ONLY - ANY EXISTING CERTIFICATES SHOULD BE CANCELLED",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n841381200000\t- - - For domestic use",
+    "hsCode": "841381200000",
+    "level": "PCOC",
+    "reason": "IECEE ONLY - ANY EXISTING CERTIFICATES SHOULD BE CANCELLED",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n841382000000\t-- Liquid elevators",
+    "hsCode": "841382000000",
+    "level": "PCOC",
+    "reason": "IECEE ONLY - ANY EXISTING CERTIFICATES SHOULD BE CANCELLED",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n854449100000\t- - - Electric cable of a cross-section exceeding 10 mm and a voltage exceeding 300 V",
+    "hsCode": "854449100000",
+    "level": "PCOC",
+    "reason": "IECEE ONLY - ANY EXISTING CERTIFICATES SHOULD BE CANCELLED",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n854449290000\t---- Other",
+    "hsCode": "854449290000",
+    "level": "PCOC",
+    "reason": "IECEE ONLY - ANY EXISTING CERTIFICATES SHOULD BE CANCELLED",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n950450000001\tVideo game consoles and machines",
+    "hsCode": "950450000001",
+    "level": "PCOC",
+    "reason": "IECEE ONLY - ANY EXISTING CERTIFICATES SHOULD BE CANCELLED",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n950450000002\tVideo game cotrollers",
+    "hsCode": "950450000002",
+    "level": "PCOC",
+    "reason": "IECEE ONLY - ANY EXISTING CERTIFICATES SHOULD BE CANCELLED",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850440110000\t- - - - Charger for portable phones and tablets",
+    "hsCode": "850440110000",
+    "level": "PCOC",
+    "reason": "IECEE ONLY - ANY EXISTING CERTIFICATES SHOULD BE CANCELLED",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n950450000003\tVideo game parts and accessories",
+    "hsCode": "950450000003",
+    "level": "PCOC",
+    "reason": "IECEE ONLY - ANY EXISTING CERTIFICATES SHOULD BE CANCELLED",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n851830900003\tEarphones include microphone and speakerphone",
+    "hsCode": "851830900003",
+    "level": "PCOC",
+    "reason": "IECEE ONLY - ANY EXISTING CERTIFICATES SHOULD BE CANCELLED",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n851830900001\tHeadphones without microphone",
+    "hsCode": "851830900001",
+    "level": "PCOC",
+    "reason": "IECEE ONLY - ANY EXISTING CERTIFICATES SHOULD BE CANCELLED",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n847989999999\tOthers",
+    "hsCode": "847989999999",
+    "level": "PCOC",
+    "reason": "SFDA",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n620920000002\tBreastplates for babies",
+    "hsCode": "620920000002",
+    "level": "PCOC",
+    "reason": "TEXTILES TYPE 3",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n690723000000\t-- Of a water absorption coefficient by weight exceeding 10 %",
+    "hsCode": "690723000000",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n480300100001\tPaper, a kind used as toilet paper",
+    "hsCode": "480300100001",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "0 Affected Tariffs:",
+    "hsCode": "480300100002",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n480300100003\tPaper, a kind used as hand towels",
+    "hsCode": "480300100003",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n480300100004\tPaper, a kind used as meal towels",
+    "hsCode": "480300100004",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n480300100005\tPaper, a kind prepared for usage and similar paper for household purposes",
+    "hsCode": "480300100005",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "0 Affected Tariffs:",
+    "hsCode": "480300100006",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n480300909999\tothers",
+    "hsCode": "480300909999",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n732599100001\tControl Slots",
+    "hsCode": "732599100001",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n732599109999\tOther",
+    "hsCode": "732599109999",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n732690300001\tPainted",
+    "hsCode": "732690300001",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n732690300002\tNot painted",
+    "hsCode": "732690300002",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n550320000000\t- Of polyesters",
+    "hsCode": "550320000000",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730890900002\tHandrails",
+    "hsCode": "730890900002",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721049000000\t-- Other",
+    "hsCode": "721049000000",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721030000000\t- Electrolytically plated or coated with zinc",
+    "hsCode": "721030000000",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721070000001\tPrinted",
+    "hsCode": "721070000001",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721070000002\tVarnished",
+    "hsCode": "721070000002",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721070000003\tCovered with plastics",
+    "hsCode": "721070000003",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721710000001\tOf iron",
+    "hsCode": "721710000001",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721710000002\tOf steel",
+    "hsCode": "721710000002",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721633200001\tOf iron",
+    "hsCode": "721633200001",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721633200002\tOf steel",
+    "hsCode": "721633200002",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721420400000\t- - - Of circular cross-section measuring 10-32 mm in diameter",
+    "hsCode": "721420400000",
+    "level": "SCOC",
+    "reason": "Requires permission from ministry of natural minerals.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730300000001\tcast iron pipes and hollow tubes",
+    "hsCode": "730300000001",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730300000002\thollow special shapes (profiles), Of cast iron",
+    "hsCode": "730300000002",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730719000000\t-- Other",
+    "hsCode": "730719000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730721000000\t-- Flanges",
+    "hsCode": "730721000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730722000000\t- - Threaded elbows, bends and sleeves",
+    "hsCode": "730722000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730723000000\t-- Butt welding fittings",
+    "hsCode": "730723000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730791000000\t-- Flanges",
+    "hsCode": "730791000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n252321000002\tloaded white portland",
+    "hsCode": "252321000002",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n252321000003\tBulk white cement colored industrially",
+    "hsCode": "252321000003",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n252321000004\tloaded white cement colored industrially",
+    "hsCode": "252321000004",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n252321000001\tBulk white portland",
+    "hsCode": "252321000001",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n560819009999\tothers",
+    "hsCode": "560819009999",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730890200003\tIn stores",
+    "hsCode": "730890200003",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730890200001\tIn shops",
+    "hsCode": "730890200001",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730890200002\tIn the workshops",
+    "hsCode": "730890200002",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n730890200003\tIn stores",
+    "hsCode": "730890200003",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n482369000004\tCup of paperboard",
+    "hsCode": "482369000004",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n732510109999\tOther",
+    "hsCode": "732510109999",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n732510100002\tSewer coverings",
+    "hsCode": "732510100002",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n732510100001\tControl Slots",
+    "hsCode": "732510100001",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "0 Affected Tariffs:",
+    "hsCode": "550952900000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "0 Affected Tariffs:",
+    "hsCode": "480300900001",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n630790990000\t- - - - Other",
+    "hsCode": "630790990000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n271019190002\tlight oil preparations",
+    "hsCode": "271019190002",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n271019190001\tpetroleum oils and oils obtained from bitumenous mineral material, (excl. crude), containing at least 70% petroleum oil by weight, and being the main constituent element of these preparations",
+    "hsCode": "271019190001",
+    "level": "",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n271019199999\tother",
+    "hsCode": "271019199999",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n630790990000\t- - - - Other",
+    "hsCode": "630790990000",
+    "level": "SCOC",
+    "reason": "This HS code is designed for Face Masks which have strict testing requirements and SFDA is also required. This HS code is often used for Sleep Masks by clients, but should be avoided and a different HS code found.",
+    "rule": "BAN"
+  },
+  {
+    "affectedTariffs": "0 Affected Tariffs:",
+    "hsCode": "850710000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000002\tElectric savings of lead and acid used to launch motors for piston engine 35 amp.",
+    "hsCode": "850710000002",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000003\tElectric savings of lead and acid used to launch motors for piston engine 40 amp.",
+    "hsCode": "850710000003",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000004\tElectric savings of lead and acid used to launch motors for piston engine 43 to 44 amp",
+    "hsCode": "850710000004",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000005\tElectric savings of lead and acid used to launch motors for piston engine 45 amp.",
+    "hsCode": "850710000005",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000006\tElectric savings of lead and acid used to launch motors for piston engine 50 amp.",
+    "hsCode": "850710000006",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000008\tElectric savings of lead and acid used to launch motors for piston engine 60-62 amp",
+    "hsCode": "850710000008",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000009\tElectric savings of lead and acid used to launch motors for piston engine 65 to 68 amp",
+    "hsCode": "850710000009",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000010\tElectric savings of lead and acid used to launch motors for piston engines of 70 to 74 amp",
+    "hsCode": "850710000010",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000011\tElectric savings of lead and acid used to launch motors for piston engine of 75 to 80 amp",
+    "hsCode": "850710000011",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000012\tElectric savings of lead and acid used to launch motors for piston engine85 to 88 amp",
+    "hsCode": "850710000012",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000013\tElectric savings of lead and acid used to launch motors for piston engine of 95 to 100 amp",
+    "hsCode": "850710000013",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710000014\tElectric savings of lead and acid used to launch motors for piston engine of 115 amp",
+    "hsCode": "850710000014",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850710009999\tOther electric savings are operated by lead - acid",
+    "hsCode": "850710009999",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850720000000\t- Other lead-acid accumulators",
+    "hsCode": "850720000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n382440000000\t- Prepared Additives for cements, mortars or concretes",
+    "hsCode": "382440000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "0 Affected Tariffs:",
+    "hsCode": "721310000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721090000000\t- Other",
+    "hsCode": "721090000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721230000001\tPainted",
+    "hsCode": "721230000001",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n721230000002\tCovered",
+    "hsCode": "721230000002",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n722592000001\tPainted",
+    "hsCode": "722592000001",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n722592000002\tCovered",
+    "hsCode": "722592000002",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n722599000000\t-- Other",
+    "hsCode": "722599000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n690721000000\t-- Of a water absorption coefficient by weight not exceeding 0.5 %",
+    "hsCode": "690721000000",
+    "level": "PCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n690722000000\t-- Of a water absorption coefficient by weight exceeding 0.5 % but not exceeding 10 %",
+    "hsCode": "690722000000",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "14 Affected Tariffs:\n\n850710000002\tElectric savings of lead and acid used to launch motors for piston engine 35 amp.\n850710000003\tElectric savings of lead and acid used to launch motors for piston engine 40 amp.\n850710000004\tElectric savings of lead and acid used to launch motors for piston engine 43 to 44 amp\n850710000005\tElectric savings of lead and acid used to launch motors for piston engine 45 amp.\n850710000006\tElectric savings of lead and acid used to launch motors for piston engine 50 amp.\n850710000007\tElectric savings of lead and acid used to launch motors for piston engine 55 amp.\n850710000008\tElectric savings of lead and acid used to launch motors for piston engine 60-62 amp\n850710000009\tElectric savings of lead and acid used to launch motors for piston engine 65 to 68 amp\n850710000010\tElectric savings of lead and acid used to launch motors for piston engines of 70 to 74 amp\n850710000011\tElectric savings of lead and acid used to launch motors for piston engine of 75 to 80 amp\n850710000012\tElectric savings of lead and acid used to launch motors for piston engine85 to 88 amp\n850710000013\tElectric savings of lead and acid used to launch motors for piston engine of 95 to 100 amp\n850710000014\tElectric savings of lead and acid used to launch motors for piston engine of 115 amp\n850710009999\tOther electric savings are operated by lead - acid",
+    "hsCode": "85071",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n850720000000\t- Other lead-acid accumulators",
+    "hsCode": "85072",
+    "level": "SCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852589300000\t0",
+    "hsCode": "852589300000",
+    "level": "PCOC",
+    "reason": "This product required MIM approval before every shipment of the product. CB cannot approve SCOC without the prior approval.",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n610322000000\t-- Of cotton",
+    "hsCode": "610322000000",
+    "level": "PCOC",
+    "reason": "Military items are cleared by an official letter from the beneficiary military authority. If they are imported for companies and institutions, the approval of the Supreme Authority for Industrial Security at the Ministry of Interior is required for their clearance.",
+    "rule": "BAN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n610323000000\t-- Of synthetic fibres",
+    "hsCode": "610323000000",
+    "level": "PCOC",
+    "reason": "Military items are cleared by an official letter from the beneficiary military authority. If they are imported for companies and institutions, the approval of the Supreme Authority for Industrial Security at the Ministry of Interior is required for their clearance.",
+    "rule": "BAN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n610331000000\t-- Of wool or fine animal hair",
+    "hsCode": "610331000000",
+    "level": "PCOC",
+    "reason": "Military items are cleared by an official letter from the beneficiary military authority. If they are imported for companies and institutions, the approval of the Supreme Authority for Industrial Security at the Ministry of Interior is required for their clearance.",
+    "rule": "BAN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n610333000000\t-- Of synthetic fibres",
+    "hsCode": "610333000000",
+    "level": "PCOC",
+    "reason": "Military items are cleared by an official letter from the beneficiary military authority. If they are imported for companies and institutions, the approval of the Supreme Authority for Industrial Security at the Ministry of Interior is required for their clearance.",
+    "rule": "BAN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n610339000000\t-- Of other textile materials",
+    "hsCode": "610339000000",
+    "level": "PCOC",
+    "reason": "Military items are cleared by an official letter from the beneficiary military authority. If they are imported for companies and institutions, the approval of the Supreme Authority for Industrial Security at the Ministry of Interior is required for their clearance.",
+    "rule": "BAN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n610341000000\t-- Of wool or fine animal hair",
+    "hsCode": "610341000000",
+    "level": "PCOC",
+    "reason": "Military items are cleared by an official letter from the beneficiary military authority. If they are imported for companies and institutions, the approval of the Supreme Authority for Industrial Security at the Ministry of Interior is required for their clearance.",
+    "rule": "BAN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n620323000000\t-- Of synthetic fibres",
+    "hsCode": "620323000000",
+    "level": "PCOC",
+    "reason": "Military items are cleared by an official letter from the beneficiary military authority. If they are imported for companies and institutions, the approval of the Supreme Authority for Industrial Security at the Ministry of Interior is required for their clearance.",
+    "rule": "BAN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n620333000000\t-- Of synthetic fibres",
+    "hsCode": "620333000000",
+    "level": "PCOC",
+    "reason": "Military items are cleared by an official letter from the beneficiary military authority. If they are imported for companies and institutions, the approval of the Supreme Authority for Industrial Security at the Ministry of Interior is required for their clearance.",
+    "rule": "BAN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n847160000001\tMouse \"Mouse\"",
+    "hsCode": "847160000001",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n847160000002\tkeyboard",
+    "hsCode": "847160000002",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n851821000000\t- - Single loudspeakers, mounted in their enclosures",
+    "hsCode": "851821000000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n851822000000\t- - Multiple loudspeakers, mounted in the same enclosure",
+    "hsCode": "851822000000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852581100000\t0",
+    "hsCode": "852581100000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852581200000\t0",
+    "hsCode": "852581200000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852581900000\t0",
+    "hsCode": "852581900000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852582100000\t0",
+    "hsCode": "852582100000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852582200000\t0",
+    "hsCode": "852582200000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852582900000\t0",
+    "hsCode": "852582900000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852583100000\t0",
+    "hsCode": "852583100000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852583200000\t0",
+    "hsCode": "852583200000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852583900000\t0",
+    "hsCode": "852583900000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852589100000\t0",
+    "hsCode": "852589100000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852589200000\t0",
+    "hsCode": "852589200000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852589900000\t0",
+    "hsCode": "852589900000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n852691100000\t- - - Global Positioning Systems (GPS)",
+    "hsCode": "852691100000",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  },
+  {
+    "affectedTariffs": "1 Affected Tariff:\n\n851762200004\tRouters and Hobbs (distributor)",
+    "hsCode": "851762200004",
+    "level": "SCOC",
+    "reason": "Before issuing SCOC/PCOC - check the item has been upgraded to include USB Type-C ports or connectors",
+    "rule": "WARN"
+  }
+]

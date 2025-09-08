@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "SCOC Checker",
+    "version": "1.0",
+    "description": "Checks the SCOC for MIM HS code and GCC applicable country of origins and shows green light if all is good to approve SCOC",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  

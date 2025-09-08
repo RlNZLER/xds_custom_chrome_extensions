@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "XDS Task Scraper",
+  "version": "1.1",
+  "description": "Scrape Task IDs from the XDS portal (Step 1).",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["https://portal.xds-solutions.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "XDS Task Scraper"
+  }
+}

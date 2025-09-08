@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SABER Extractor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      width: 280px;
+    }
+    #indicator {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    #progressContainer {
+      display: none;
+      width: 100%;
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+    #progressBar {
+      height: 20px;
+      width: 0%;
+      background-color: #4caf50;
+      text-align: center;
+      color: white;
+      line-height: 20px;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      font-size: 14px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="indicator">Click start to check the SCOC Request</div>
+  <div id="progressContainer">
+    <div id="progressBar">0%</div>
+  </div>
+  <div id="jobCommentContainer" style="display:none; margin-top: 15px;">
+    <label for="jobComment">📋 Job Comment:</label>
+    <textarea id="jobComment" rows="6" readonly style="width:100%;"></textarea>
+    <button id="copyCommentBtn">📋 Copy Comment</button>
+  </div>
+  <button id="startBtn">🚀 Start Extraction</button>
+  <button id="downloadBtn" disabled>⬇ Download Report</button>
+  <button id="extractRulesBtn">📤 Extract Global HS Code Rules</button>
+  <button id="downloadRulesBtn">⬇ Download Global Rules</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
