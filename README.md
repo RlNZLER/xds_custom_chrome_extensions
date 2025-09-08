@@ -1,16 +1,21 @@
-# My Chrome Extensions (Monorepo)
+# XDS Custom Chrome Extensions
 
-This repository contains multiple Chrome extensions:
+This repo contains multiple Chrome extensions:
 
-- **extension-a** — short description
-- **extension-b** — short description
-- **extension-c** — short description
+- **description-checker-extension** — Checks description rules.
+- **scoc-checker-extension** — SCoC rule checker utilities.
+- **xds-task-scraper** — Scrapes XDS portal task IDs and renewals into CSV.
 
-## Load an extension for development
-
-1. Go to `chrome://extensions`
-2. Turn on **Developer mode**
+## Load an extension (dev)
+1. Open `chrome://extensions`
+2. Enable **Developer mode**
 3. Click **Load unpacked**
-4. Select the `extension-x/` folder
+4. Select the specific extension folder (e.g., `xds-task-scraper/`)
 
-Each extension may have its own README with details.
+## Contributing
+Typical flow:
+```
+git add .
+git commit -m "feat: <what changed>"
+git push
+```
