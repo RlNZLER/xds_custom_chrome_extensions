@@ -2,9 +2,9 @@
 
 This repo contains multiple Chrome extensions:
 
-- **description-checker-extension** — Extension to select multiple models in invoice tab based on the product description.
-- **scoc-checker-extension** — Extension to check if the SCOC requires MIM approval or GCC.
-- **xds-task-scraper** — Scrapes XDS portal task IDs and renewals into CSV.
+- **[description-checker-extension](description-checker-extension/)** — Extension to select multiple models in invoice tab based on the product description.  
+- **[scoc-checker-extension](scoc-checker-extension/)** — Extension to check if the SCoC requires MIM approval or GCC.  
+- **[xds-task-scraper](xds-task-scraper/)** — Scrapes XDS portal task IDs and renewals into CSV.  
 
 ## Future Ideas:
 1. PCOC CLICK product template filler
