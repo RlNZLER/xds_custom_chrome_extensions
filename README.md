@@ -6,6 +6,10 @@ This repo contains multiple Chrome extensions:
 - **scoc-checker-extension** — Extension to check if the SCOC requires MIM approval or GCC.
 - **xds-task-scraper** — Scrapes XDS portal task IDs and renewals into CSV.
 
+## Future Ideas:
+1. PCOC CLICK product template filler
+
+
 ## Load an extension (dev)
 1. Open `chrome://extensions`
 2. Enable **Developer mode**
