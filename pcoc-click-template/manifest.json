@@ -1,0 +1,12 @@
+{
+"manifest_version": 3,
+"name": "pcoc-click-template",
+"version": "0.1.0",
+"description": "Collect one piece of data from the current page and show it.",
+"action": {
+"default_popup": "popup.html",
+"default_title": "pcoc-click-template"
+},
+"permissions": ["activeTab", "scripting", "storage"],
+"host_permissions": ["<all_urls>"]
+}
