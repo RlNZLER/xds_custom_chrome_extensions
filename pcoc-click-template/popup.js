@@ -4,29 +4,37 @@
 
 const $ = (sel) => document.querySelector(sel);
 const statusEl = $("#status");
-const outputEl = $("#output");
+// const outputEl = $("#output");
 const btn = $("#collectBtn");
 const wrapEl = $("#progressWrap");
 const barEl = $("#progressBar");
 const metaEl = $("#progressMeta");
 
-function setStatus(msg, cls = "") {
-  statusEl.textContent = msg;
-  statusEl.className = cls;
+function setStatus(msg, tone = "") {
+  const wrap = document.getElementById("status");
+  const text = document.getElementById("statusText");
+  text.textContent = msg;
+  wrap.className = tone || "";  // "", "ok", "warn", "err", "hint"
 }
 
 function setProgress(cur, total) {
+  const wrapEl = document.getElementById("progressWrap");
+  const barEl  = document.getElementById("progressBar");
+  const metaEl = document.getElementById("progressMeta");
+
   if (!total || total < 1) {
     wrapEl.style.display = "none";
     metaEl.style.display = "none";
     return;
   }
-  const pct = Math.max(0, Math.min(100, Math.round((cur / total) * 100)));
   wrapEl.style.display = "block";
   metaEl.style.display = "block";
+
+  const pct = Math.max(0, Math.min(100, Math.round((cur / total) * 100)));
   barEl.style.width = pct + "%";
   metaEl.textContent = `${cur} / ${total} pages`;
 }
+
 
 async function getActiveTab() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -439,7 +447,7 @@ async function collectWithProgressAndExport() {
       model_numbers: allModels
     };
 
-    outputEl.textContent = JSON.stringify(data, null, 2);
+    // outputEl.textContent = JSON.stringify(data, null, 2);
     await chrome.storage.local.set({ lastCollected: data });
 
     // Step 4: write to fixed columns and download
@@ -465,8 +473,8 @@ async function collectWithProgressAndExport() {
 btn.addEventListener("click", collectWithProgressAndExport);
 
 // Show last result on load
-chrome.storage.local.get(["lastCollected"], ({ lastCollected }) => {
-  if (lastCollected) {
-    outputEl.textContent = JSON.stringify(lastCollected, null, 2);
-  }
-});
+// chrome.storage.local.get(["lastCollected"], ({ lastCollected }) => {
+//   if (lastCollected) {
+//     outputEl.textContent = JSON.stringify(lastCollected, null, 2);
+//   }
+// });
