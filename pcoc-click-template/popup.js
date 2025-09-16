@@ -356,7 +356,7 @@ async function exportToExcelFixedColumnsMultiRow({
     sheet.cell(`G${row}`).value(1);
 
     // H: "Unit"
-    sheet.cell(`H${row}`).value("Unit");
+    sheet.cell(`H${row}`).value("UNIT");
 
     // J: 1
     sheet.cell(`J${row}`).value(1);
