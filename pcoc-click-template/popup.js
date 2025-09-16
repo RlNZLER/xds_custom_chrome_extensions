@@ -1,8 +1,6 @@
-// Expand panels, collect required fields, and collect ALL model numbers across pages
-// with a live progress bar in the popup. Base field extraction hardened for alt tabs/labels.
-//
-// Output:
-// { request_number, hs_code, product_name, country_of_origin, trademark, model_numbers: [] }
+// popup.js — Collect fields + ALL model numbers (with progress bar),
+// then fill fixed columns in the Excel template and auto-download as
+// scoc_template_v2_<REQUEST_NUMBER>.xlsx
 
 const $ = (sel) => document.querySelector(sel);
 const statusEl = $("#status");
@@ -35,9 +33,7 @@ async function getActiveTab() {
   return tab;
 }
 
-/** ================= IN-PAGE HELPERS ================= */
-
-// 1) Expand + read base fields (hardened)
+/* ============================ IN-PAGE HELPERS ============================ */
 function _expandAndReadBase() {
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   const TEXT = (el) => (el ? (el.innerText ?? el.textContent ?? "") : "").trim();
@@ -63,7 +59,7 @@ function _expandAndReadBase() {
     const pairs = [
       ["#btnProductData", "#collapseProductDetails"],
       ["#btnHsCodeData",  "#collapseHsCodeData"],
-      ['a[href="#ProductModelNos_"]', "#ProductModelNos_"], // models panel
+      ['a[href="#ProductModelNos_"]', "#ProductModelNos_"],
     ];
     for (const [btnSel, pnlSel] of pairs) {
       const btn = document.querySelector(btnSel);
@@ -91,7 +87,6 @@ function _expandAndReadBase() {
     }
   }
 
-  // NEW: proactively click likely tabs by text (EN + AR)
   async function clickLikelyTabs() {
     const tabs = Array.from(document.querySelectorAll('.nav-tabs a, [data-bs-toggle="tab"], [data-toggle="tab"], [role="tab"], a[href^="#"]'));
     const matchers = [
@@ -116,8 +111,6 @@ function _expandAndReadBase() {
     }
     await sleep(100);
   }
-
-  // --------- Field extractors (more tolerant) ---------
 
   function getRequestNumber() {
     const hdr = document.querySelector(".col-md-10.title-brdr .control-label") || document.querySelector(".control-label");
@@ -144,7 +137,6 @@ function _expandAndReadBase() {
     const panel = document.querySelector("#collapseHsCodeData");
     const scope = panel && (panel.classList.contains("show") || panel.classList.contains("in") || isVisible(panel)) ? panel : document;
 
-    // Strict pair pattern
     for (const p of Array.from(scope.querySelectorAll("p"))) {
       const labs = p.querySelectorAll("label");
       if (labs.length >= 2) {
@@ -155,7 +147,6 @@ function _expandAndReadBase() {
         }
       }
     }
-    // Label then sibling
     const lbl = Array.from(scope.querySelectorAll("label.control-label, th, dt, strong"))
       .find(l => /^(HS\s*Code|HSCode)\s*:?\s*$/i.test((l.innerText || l.textContent || "").trim()));
     if (lbl) {
@@ -166,22 +157,19 @@ function _expandAndReadBase() {
         if (digits) return digits;
       }
     }
-    // Whole-page fallback (as last resort)
     const all = document.body?.innerText || "";
     const m = all.match(/HS\s*Code[^0-9]{0,50}(\d{6,15})/i);
     return m?.[1] || null;
   }
 
-  // Generic pair collector limited to relevant sections
   function collectPairs() {
     const kv = {};
     const add = (k, v) => {
       const key = (k || "").toLowerCase().replace(/\s+/g, "").trim();
       const val = (v || "").trim();
       if (!key || !val) return;
-      if (kv[key]) {
-        if (Array.isArray(kv[key])) kv[key].push(val); else kv[key] = [kv[key], val];
-      } else kv[key] = val;
+      if (kv[key]) { if (Array.isArray(kv[key])) kv[key].push(val); else kv[key] = [kv[key], val]; }
+      else kv[key] = val;
     };
     const scopes = [
       document,
@@ -190,18 +178,15 @@ function _expandAndReadBase() {
     ].filter(Boolean);
 
     for (const scope of scopes) {
-      // p > labels
       for (const p of Array.from(scope.querySelectorAll("p"))) {
         const labs = p.querySelectorAll("label, span");
         if (labs.length >= 2) add(labs[0].innerText || labs[0].textContent, labs[1].innerText || labs[1].textContent);
       }
-      // .form-group
       for (const grp of Array.from(scope.querySelectorAll(".form-group"))) {
         const kEl = grp.querySelector("label.control-label, label[for], strong");
         const vEl = grp.querySelector("span.form-control, label.form-control, .form-control:not(input):not(textarea), span, strong");
         if (kEl && vEl) add(kEl.innerText || kEl.textContent, vEl.innerText || vEl.textContent);
       }
-      // tables / dl
       for (const tr of Array.from(scope.querySelectorAll("tr"))) {
         const th = tr.querySelector("th");
         const tds = tr.querySelectorAll("td");
@@ -216,30 +201,17 @@ function _expandAndReadBase() {
     return kv;
   }
 
-  // Targeted direct selectors/fallbacks
   function getProductName(kv) {
-    // Common labels/keys
     const first = (v) => Array.isArray(v) ? v[0] : v;
     return (
       first(kv["englishproductname"]) ||
       first(kv["productname"]) ||
-      // Arabic label fallback
-      first(kv["اسم_المنتج"]) || first(kv["اسم المنتج"]) ||
-      // Header/title fallback e.g., "Product Name : EPCON C8 XTREM"
-      (() => {
-        const h = document.querySelector("h4.panel-title");
-        if (!h) return null;
-        const t = (h.innerText || h.textContent || "").trim();
-        const m = t.split(/Product\s*Name\s*:/i);
-        return m.length > 1 ? m.slice(1).join(":").trim() : null;
-      })() ||
-      null
+      first(kv["اسم_المنتج"]) || first(kv["اسمالمنتج"]) || null
     );
   }
 
   function getCountryOfOrigin(kv) {
     const first = (v) => Array.isArray(v) ? v[0] : v;
-    // direct label on page
     const span = Array.from(document.querySelectorAll("span.control-label, label.control-label"))
       .find(el => /Country\s*of\s*origin/i.test((el.innerText || el.textContent || "")));
     if (span) {
@@ -251,7 +223,6 @@ function _expandAndReadBase() {
 
   function getTrademark(kv) {
     const first = (v) => Array.isArray(v) ? v[0] : v;
-    // direct for="Trademark"
     const tm = document.querySelector("label[for='Trademark']");
     if (tm) {
       const val = tm.closest(".form-group")?.querySelector("span.form-control, label.form-control");
@@ -261,7 +232,6 @@ function _expandAndReadBase() {
   }
 
   return (async () => {
-    // Expand broadly, also click likely tabs
     await expandKnown();
     await expandGeneric();
     await clickLikelyTabs();
@@ -274,12 +244,10 @@ function _expandAndReadBase() {
     const country_of_origin = getCountryOfOrigin(kv);
     const trademark = getTrademark(kv);
 
-    // Current page models (page 1)
     const model_inputs = Array.from((document.querySelector("#ProductModelNos_") || document)
       .querySelectorAll('.ProductModelsGrid input.form-control[readonly][value]'));
     const current_models = model_inputs.map(i => (i.getAttribute("value") || "").trim()).filter(Boolean);
 
-    // Pager info
     const pageText = (document.querySelector("#ProductModelNos_ .panel-footer .search_results_text")?.innerText || "").trim();
     let totalPages = 1, currentPage = 1;
     const mm = pageText.match(/Page\s+(\d+)\s+Of\s+(\d+)/i);
@@ -297,9 +265,9 @@ function _expandAndReadBase() {
   })();
 }
 
-// 2) Go to page n and read its models (used by popup loop)
 function _gotoPageAndGetModels(n) {
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
   function getModels() {
     const grid = document.querySelector("#ProductModelNos_ .ProductModelsGrid") || document.querySelector("#ProductModelNos_");
     const inputs = Array.from(grid?.querySelectorAll('input.form-control[readonly][value]') || []);
@@ -337,9 +305,59 @@ function _gotoPageAndGetModels(n) {
   })();
 }
 
-/** ================= POPUP ORCHESTRATION ================= */
+/* ============================ EXCEL EXPORT ============================ */
+// Writes values to fixed cells, starting at row 2 (headers are in row 1).
+async function exportToExcelFixedColumns({ request_number, product_name, hs_code, country_of_origin, trademark, model_numbers }) {
+  // Load template bytes
+  const tplUrl = chrome.runtime.getURL("lib/scoc_template_v2.xlsx");
+  const res = await fetch(tplUrl);
+  const buf = await res.arrayBuffer();
 
-async function collectWithProgress() {
+  // Open workbook (preserves formatting)
+  const wb = await XlsxPopulate.fromDataAsync(buf);
+  const sheet = wb.sheets()[0];
+
+  // Always write to row 2 as requested (top row is headers)
+  const row = 2;
+
+  // C: Product name
+  sheet.cell(`C${row}`).value(product_name ?? "");
+
+  // E: HS code
+  sheet.cell(`E${row}`).value(hs_code ?? "");
+
+  // F: Country of origin
+  sheet.cell(`F${row}`).value(country_of_origin ?? "");
+
+  // G: 1
+  sheet.cell(`G${row}`).value(1);
+
+  // H: "Unit"
+  sheet.cell(`H${row}`).value("Unit");
+
+  // J: 1
+  sheet.cell(`J${row}`).value(1);
+
+  // K: Trademark
+  sheet.cell(`K${row}`).value(trademark ?? "");
+
+  // L: All models (newline-separated)
+  const modelsText = Array.isArray(model_numbers) ? model_numbers.join("\n") : (model_numbers ?? "");
+  sheet.cell(`L${row}`).value(modelsText);
+
+  // Export and download
+  const blob = await wb.outputAsync(); // values only; formatting preserved
+  const filename = `scoc_template_v2_${request_number || "no_req"}.xlsx`;
+  const blobUrl = URL.createObjectURL(blob);
+  try {
+    await chrome.downloads.download({ url: blobUrl, filename, saveAs: false });
+  } finally {
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
+  }
+}
+
+/* ============================ POPUP ORCHESTRATION ============================ */
+async function collectWithProgressAndExport() {
   try {
     btn.disabled = true;
     setStatus("Expanding & collecting…", "hint");
@@ -354,13 +372,12 @@ async function collectWithProgress() {
       return setStatus("This page is restricted. Switch to a normal website and try again.", "warn");
     }
 
-    // Step 1: expand + read base + pager + page 1 models
+    // Step 1: base read
     const [{ result: baseRes }] = await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: _expandAndReadBase,
       world: "MAIN"
     });
-
     if (!baseRes) {
       setStatus("Could not read base info.", "warn");
       return;
@@ -368,41 +385,33 @@ async function collectWithProgress() {
 
     const { base, pager, current_models } = baseRes;
     const totalPages = Math.max(1, pager?.totalPages || 1);
-
-    // Progress bar
     setProgress(1, totalPages);
 
-    // Collect models across all pages
+    // Step 2: collect models all pages
     const seen = new Set();
     const allModels = [];
-
-    // Page 1
     for (const v of current_models || []) {
       const s = String(v).trim();
       if (s && !seen.has(s)) { seen.add(s); allModels.push(s); }
     }
 
-    // Pages 2..N
     for (let page = 2; page <= totalPages; page++) {
       setStatus(`Collecting models… (page ${page}/${totalPages})`, "hint");
-
       const [{ result: pageRes }] = await chrome.scripting.executeScript({
         target: { tabId: tab.id },
         func: _gotoPageAndGetModels,
         args: [page],
         world: "MAIN"
       });
-
       const models = (pageRes && pageRes.models) || [];
       for (const v of models) {
         const s = String(v).trim();
         if (s && !seen.has(s)) { seen.add(s); allModels.push(s); }
       }
-
       setProgress(page, totalPages);
     }
 
-    // Final payload
+    // Step 3: final data
     const data = {
       collected_at: new Date().toISOString(),
       url,
@@ -416,7 +425,18 @@ async function collectWithProgress() {
 
     outputEl.textContent = JSON.stringify(data, null, 2);
     await chrome.storage.local.set({ lastCollected: data });
-    setStatus("Collected ✓", "ok");
+
+    // Step 4: write to fixed columns and download
+    await exportToExcelFixedColumns({
+      request_number: data.request_number,
+      product_name: data.product_name,
+      hs_code: data.hs_code,
+      country_of_origin: data.country_of_origin,
+      trademark: data.trademark,
+      model_numbers: data.model_numbers
+    });
+
+    setStatus("Collected ✓ and exported", "ok");
 
   } catch (err) {
     console.error(err);
@@ -426,7 +446,7 @@ async function collectWithProgress() {
   }
 }
 
-btn.addEventListener("click", collectWithProgress);
+btn.addEventListener("click", collectWithProgressAndExport);
 
 // Show last result on load
 chrome.storage.local.get(["lastCollected"], ({ lastCollected }) => {

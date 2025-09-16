@@ -1,12 +1,16 @@
 {
-"manifest_version": 3,
-"name": "pcoc-click-template",
-"version": "0.1.0",
-"description": "Collect one piece of data from the current page and show it.",
-"action": {
-"default_popup": "popup.html",
-"default_title": "pcoc-click-template"
-},
-"permissions": ["activeTab", "scripting", "storage"],
-"host_permissions": ["<all_urls>"]
+  "name": "pcoc-click-template",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": { "default_popup": "popup.html" },
+  "permissions": ["scripting", "activeTab", "downloads"],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "lib/scoc_template_v2.xlsx",
+        "lib/xlsx-populate.min.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
