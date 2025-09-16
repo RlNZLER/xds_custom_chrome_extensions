@@ -1,13 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
+  <meta charset="utf-8" />
   <title>Description Checker</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h3>Enter Description</h3>
-  <input type="text" id="descriptionInput" placeholder="e.g., HARDENER" />
-  <button id="checkBtn">Check Boxes</button>
+  <div class="card">
+    <header class="row">
+      <div class="title">
+        <div class="logo">🔎</div>
+        <div>
+          Description Checker
+          <div class="muted sub">Fast box matcher</div>
+        </div>
+      </div>
+      <button id="checkBtn" class="btn">Check</button>
+    </header>
+
+    <div class="field">
+      <label for="descriptionInput">Enter description</label>
+      <input
+        type="text"
+        id="descriptionInput"
+        placeholder="e.g., HARDENER"
+        autocomplete="off"
+        spellcheck="false"
+      />
+    </div>
+
+    <div id="status" class="status hint">
+      <span class="dot"></span>
+      <span id="statusText">Ready</span>
+    </div>
+
+    <!-- Optional: small helper text -->
+    <p class="help muted">
+      Tip: press <kbd>Enter</kbd> to run the check.
+    </p>
+  </div>
 
   <script src="popup.js"></script>
 </body>
