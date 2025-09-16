@@ -306,8 +306,16 @@ function _gotoPageAndGetModels(n) {
 }
 
 /* ============================ EXCEL EXPORT ============================ */
-// Writes values to fixed cells, starting at row 2 (headers are in row 1).
-async function exportToExcelFixedColumns({ request_number, product_name, hs_code, country_of_origin, trademark, model_numbers }) {
+// Writes one model per row (starting at row 2) and repeats other fields.
+// Columns: C=Product, E=HS, F=COO, G=1, H="Unit", J=1, K=Trademark, L=Model
+async function exportToExcelFixedColumnsMultiRow({
+  request_number,
+  product_name,
+  hs_code,
+  country_of_origin,
+  trademark,
+  model_numbers
+}) {
   // Load template bytes
   const tplUrl = chrome.runtime.getURL("lib/scoc_template_v2.xlsx");
   const res = await fetch(tplUrl);
@@ -317,33 +325,40 @@ async function exportToExcelFixedColumns({ request_number, product_name, hs_code
   const wb = await XlsxPopulate.fromDataAsync(buf);
   const sheet = wb.sheets()[0];
 
-  // Always write to row 2 as requested (top row is headers)
-  const row = 2;
+  // Normalize models to an array; if none, write a single row with empty model
+  const models = Array.isArray(model_numbers) && model_numbers.length > 0
+    ? model_numbers
+    : [""];
 
-  // C: Product name
-  sheet.cell(`C${row}`).value(product_name ?? "");
+  // Write each model on its own row, starting from row 2
+  const startRow = 2;
+  models.forEach((model, idx) => {
+    const row = startRow + idx;
 
-  // E: HS code
-  sheet.cell(`E${row}`).value(hs_code ?? "");
+    // C: Product name
+    sheet.cell(`C${row}`).value(product_name ?? "");
 
-  // F: Country of origin
-  sheet.cell(`F${row}`).value(country_of_origin ?? "");
+    // E: HS code
+    sheet.cell(`E${row}`).value(hs_code ?? "");
 
-  // G: 1
-  sheet.cell(`G${row}`).value(1);
+    // F: Country of origin
+    sheet.cell(`F${row}`).value(country_of_origin ?? "");
 
-  // H: "Unit"
-  sheet.cell(`H${row}`).value("Unit");
+    // G: 1
+    sheet.cell(`G${row}`).value(1);
 
-  // J: 1
-  sheet.cell(`J${row}`).value(1);
+    // H: "Unit"
+    sheet.cell(`H${row}`).value("Unit");
 
-  // K: Trademark
-  sheet.cell(`K${row}`).value(trademark ?? "");
+    // J: 1
+    sheet.cell(`J${row}`).value(1);
 
-  // L: All models (newline-separated)
-  const modelsText = Array.isArray(model_numbers) ? model_numbers.join("\n") : (model_numbers ?? "");
-  sheet.cell(`L${row}`).value(modelsText);
+    // K: Trademark
+    sheet.cell(`K${row}`).value(trademark ?? "");
+
+    // L: Model number (one per row)
+    sheet.cell(`L${row}`).value(model ?? "");
+  });
 
   // Export and download
   const blob = await wb.outputAsync(); // values only; formatting preserved
@@ -355,6 +370,7 @@ async function exportToExcelFixedColumns({ request_number, product_name, hs_code
     setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
   }
 }
+
 
 /* ============================ POPUP ORCHESTRATION ============================ */
 async function collectWithProgressAndExport() {
@@ -427,7 +443,7 @@ async function collectWithProgressAndExport() {
     await chrome.storage.local.set({ lastCollected: data });
 
     // Step 4: write to fixed columns and download
-    await exportToExcelFixedColumns({
+    await exportToExcelFixedColumnsMultiRow({
       request_number: data.request_number,
       product_name: data.product_name,
       hs_code: data.hs_code,
